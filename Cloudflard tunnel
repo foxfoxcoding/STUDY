@@ -4,3 +4,7 @@
 	4.	Create DNS records (cloudflared can do it).
 	5.	Install tunnel as a systemd service so it runs always.
 	6.	Install cloudflared on your client and connect with SSH using Cloudflare Access (recommended) or ProxyCommand.
+
+Cloudflare Tunnel (cloudflared) can expose SSH through Cloudflare network. Steps (short):
+	1.	Add your domain 100567.xyz to Cloudflare and set the A record (you already did).
+	2.	On VPS install cloudflared.
