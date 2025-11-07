@@ -1,0 +1,43 @@
+snell build
+
+sudo apt update && sudo apt install wget unzip
+
+sudo dnf install unzip
+
+apt install vim
+
+wget https://dl.nssurge.com/snell/snell-server-v5.0.0-linux-amd64.zip
+
+sudo unzip snell-server-v*-linux-amd64.zip -d /usr/local/bin
+
+sudo vim /etc/snell-server.conf
+
+[snell-server]
+listen = 0.0.0.0:11807
+psk = AijHCeos15IvqDZTb1cJMX5GcgZzIVE
+obfs = tls
+ipv6 = false
+dns = 1.1.1.1,8.8.8.8
+
+[Unit]
+Description=Snell Proxy Service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+Group=nogroup
+LimitNOFILE=32768
+ExecStart=/usr/local/bin/snell-server -c /etc/snell-server.conf
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=snell-server
+
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl daemon-reload
+sudo systemctl enable snell
+sudo systemctl restart snell
+sudo systemctl status snell
