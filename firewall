@@ -13,3 +13,10 @@ sudo ufw status verbose
 
 1234/tcp                   ALLOW       Anywhere
 1235/tcp                   ALLOW       Anywhere
+
+download it
+sudo apt update
+sudo apt install ufw -y
+
+#check already
+sudo ufw status verbose
