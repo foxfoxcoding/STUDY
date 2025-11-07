@@ -1,0 +1,6 @@
+1.	Install cloudflared on your VPS.
+	2.	Login cloudflared to your Cloudflare account.
+	3.	Create a Tunnel and a config file that maps hostnames to ssh://localhost:1234 and ssh://localhost:1235.
+	4.	Create DNS records (cloudflared can do it).
+	5.	Install tunnel as a systemd service so it runs always.
+	6.	Install cloudflared on your client and connect with SSH using Cloudflare Access (recommended) or ProxyCommand.
