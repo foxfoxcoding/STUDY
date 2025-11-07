@@ -12,3 +12,10 @@ Cloudflare Tunnel (cloudflared) can expose SSH through Cloudflare network. Steps
 
 let pointed your Cloudflare domain to your VPS.
 Now we can build the Cloudflare Tunnel step by step.
+sudo apt update
+
+
+curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb -o cloudflared.deb
+sudo dpkg -i cloudflared.deb
+cloudflared --version
+
