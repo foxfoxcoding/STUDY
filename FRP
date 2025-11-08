@@ -1,0 +1,7 @@
+# Fast Reverse Proxy
+
+frps = FRP Server like vps 
+frpc = FRP Client like loon surge self
+
+vps frps.toml bindPort = 7000          
+auth.token = "secret123"
