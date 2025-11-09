@@ -1,13 +1,13 @@
-# 更新包管理器
+# update
 apk update
 apk add curl python3 py3-pip
 
-# 下载 gcloud SDK
+# download gcloud SDK
 curl https://sdk.cloud.google.com > install.sh
 bash install.sh --disable-prompts
 
-# 重启 iSH
+# restart iSH
 exec $SHELL
 
-# 初始化
+# new
 gcloud init
