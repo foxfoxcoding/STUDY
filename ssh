@@ -1,0 +1,19 @@
+sudo ufw allow OpenSSH
+sudo ufw allow 22/tcp
+sudo ufw allow https
+sudo ufw allow 443/tcp
+sudo ufw enable
+sudo ufw status verbose
+# Update the list of packages
+sudo apt update
+
+# Install UFW
+sudo apt install ufw
+
+# Open the SSH server configuration file
+sudo nano /etc/ssh/sshd_config
+
+port 22
+port 33
+# Restart the SSH daemon service
+sudo systemctl restart sshd
