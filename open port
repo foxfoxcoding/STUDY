@@ -1,0 +1,11 @@
+Step 1 — open those ports in firewall
+ufw allow 9988/tcp
+ufw allow 8899/tcp
+ufw reload
+ufw status numbere
+
+nano /etc/ssh/sshd_config
+Port 22
+Port 443
+Port 9988
+Port 8899
