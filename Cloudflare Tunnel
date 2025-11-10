@@ -1,0 +1,30 @@
+Cloudflare Zero Trust use web 
+Click Create a Tunnel.
+name it 
+Cloudflare Connector 
+Select your operating system
+Log into your VPS 
+Paste and run both commands. 
+Configure the SSH Hostname
+
+. Add a Public Hostname: On the "Configure" screen, click Add a public hostname.
+2. Fill in the fields for Domain SSH:
+• Subdomain: Choose a subdomain for SSH access (e.g., ssh).
+• Domain: Select the domain name you are using with Cloudflare.
+• Type: Select SSH.
+• URL: Enter the local destination for your SSH server, which is localhost:22.
+
+Set Up Zero Trust Access (Security)
+This is the most critical security step. It ensures only you can connect.
+1. Go to Access: From the left-hand menu, click Access -> Applications.
+
+Create a Policy (The Rule):
+• Policy Name: Allow Only Me
+• Action: Allow
+• Rule (Include): Set the selector to Emails and enter your specific email address (freedomcode@icloud.com).
+• Click Next.
+5. Enable Browser-Rendered Terminal (Web SSH):
+
+uname -m
+
+
