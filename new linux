@@ -1,0 +1,16 @@
+# Install ufw if it's not present
+sudo apt update
+sudo apt install ufw -y
+
+# Enable the firewall (This is the "open" step)
+sudo ufw enable 
+
+# Add port 22 (for SSH access)
+sudo ufw allow 22/tcp
+
+# Add port 443 (for secure web/HTTPS traffic)
+sudo ufw allow 443/tcp
+
+sudo nano /etc/ssh/sshd_config
+
+sudo systemctl restart sshd
