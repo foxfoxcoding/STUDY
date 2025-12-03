@@ -26,7 +26,7 @@ ExecStart=/usr/local/bin/snell-server -c /etc/snell-server.conf
 
 [Install]
 WantedBy=multi-user.target
-
+#############################
 sudo systemctl daemon-reload
 sudo systemctl enable snell
 sudo systemctl start snell
