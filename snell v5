@@ -33,7 +33,7 @@ sudo systemctl start snell
 sudo systemctl status snell
 
 ##end snell finish
-
+esc :wq!
 vim quic 
 :q!
 
