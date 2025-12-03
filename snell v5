@@ -32,7 +32,7 @@ sudo systemctl enable snell
 sudo systemctl start snell
 sudo systemctl status snell
 
-end snell finish
+##end snell finish
 
 vim quic 
 :q!
